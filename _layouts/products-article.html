@@ -1,0 +1,25 @@
+---
+layout: pages
+---
+<div class="container">
+  <div class="row margin-btm-40">
+    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">{% if page.pic == 'one' %}
+      <div class="img-width-500 image-margin-center">
+        <picture>
+          <source type="image/webp" srcset="{{ site.url }}/images/products/{{ page.image }}-{{ page.image1 }}.webp" width="500" height="333" class="img-responsive" alt="{{ page.title }} {{ page.image1 }}">
+          <img src="{{ site.url }}/images/products/{{ page.image }}-{{ page.image1 }}.jpg" width="500" height="333" class="img-responsive" alt="{{ page.title }} {{ page.image1 }}">
+        </picture>
+      </div>{% else %}
+      {% include products-carousel.html %}{% endif %}
+    </div>
+    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 padding-products-text">
+      <h1 class="text-brown font-size-25 font-weight-700 margin-btm-20">{{ page.title }}</h1>
+      {{ content }}
+    </div>
+  </div>
+  <div class="padding-btm-10">
+    {% include feedback.html %}
+  </div>
+  <p class="font-size-25 text-black font-weight-700 margin-btm-30">You May Also Like</p>{% if page.products-list == 'model' %}
+  {% include products-list-model.html %}{% else %}{% include products-list-title.html %}{% endif %}
+</div>

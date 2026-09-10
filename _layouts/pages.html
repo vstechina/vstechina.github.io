@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<div class="bg-nav">
+  <ol class="breadcrumb container">
+    <li><a href="{{ site.url }}">Home</a></li>
+    <li>/</li>{% if page.layout == 'blog-article' or page.layout == 'products-article' or page.layout == 'products-article-new' %}
+    <li><a href="{{ site.url }}/{{ page.type-en }}/">{{ page.type }}</a></li>
+    <li>/</li>{% endif %}
+    <li class="active">{{ page.title }}</li>
+  </ol>
+</div>{% if page.bg-nav == 'you' %}
+<div class="img-pr">
+  <picture class="hidden-md hidden-xs hidden-sm">
+    <source type="image/webp" srcset="{{ site.url }}/images/bg-nav/bg-{{ page.category }}.webp" class="img-responsive" width="1920" height="400" alt="{{ page.title }}">
+    <img src="{{ site.url }}/images/bg-nav/bg-{{ page.category }}.jpg" class="img-responsive" width="1920" height="400" alt="{{ page.title }}">
+  </picture>
+  <picture class="hidden-lg hidden-xl hidden-xxl">
+    <source type="image/webp" srcset="{{ site.url }}/images/bg-nav/bg-{{ page.category }}-small.webp" class="img-responsive" width="1000" height="500" alt="{{ page.title }}">
+    <img src="{{ site.url }}/images/bg-nav/bg-{{ page.category }}-small.jpg" class="img-responsive" width="1000" height="500" alt="{{ page.title }}">
+  </picture>
+  <div class="container img-text">
+    <h1 class="font-size-30 margin-btm-30 font-weight-700">{{ page.title }}</h1>
+  </div>
+</div>{% endif %}
+{{ content }}

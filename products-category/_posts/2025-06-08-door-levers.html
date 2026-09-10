@@ -1,0 +1,64 @@
+---
+layout: pages
+permalink: /door-levers/
+schema: WebPage
+category: products
+type-en: door-levers
+bg-nav: you
+image: door-levers
+title: Door Levers
+keywords: door levers
+description: Door Levers mainly showcases popular products such as the door handles T50, door handles T52, modern door handle T51, door lever V08, door handles V09.
+home-description: Door levers material include zinc alloy, stainless steel, aluminum.
+---
+<div class="bg-dark">
+  <div class="container padding-top-60 padding-btm-20">{% for post in site.categories["chanpin"] %}{% if post.type-en == page.type-en and post.hot == 'you' %}
+    <div class="bg-white img-rounded margin-btm-40 box-shadow">
+      <div class="row">
+        <div class="col-xxl-5 col-xl-5 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="img-width-800 image-margin-center">
+            <a href="{{ site.url }}{{ post.url }}">
+              <picture>
+                <source type="image/webp" srcset="{{ site.url }}/images/products/{{ post.image }}-hot.webp" width="800" height="500" class="img-responsive img-rounded" alt="{{ post.title }}">
+                <img src="{{ site.url }}/images/products/{{ post.image }}-hot.jpg" width="800" height="500" class="img-responsive img-rounded" alt="{{ post.title }}">
+              </picture>
+            </a>
+          </div>
+        </div>
+        <div class="col-xxl-7 col-xl-7 col-lg-6 col-md-6 col-sm-12 col-xs-12 padding-40">
+          <p class="font-size-25 font-weight-700"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></p>
+          {{ post.hot-description }}
+        </div>
+      </div>
+    </div>{% endif %}{% endfor %}
+    <div class="bg-white img-rounded margin-btm-40 box-shadow">
+      <div class="row">
+        <div class="col-xxl-5 col-xl-5 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="img-width-800 image-margin-center">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/jQ8T3ORB1_I" width="800" height="450" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="col-xxl-7 col-xl-7 col-lg-6 col-md-6 col-sm-12 col-xs-12 padding-40">
+          <p class="font-size-25 font-weight-700 text-brown">Door Lever T80</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container padding-top-60">
+  <div class="row margin-btm-20">{% for post in site.categories["chanpin"] %}{% if post.type-en == page.type-en and post.hot == 'wu' %}
+    <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-30">
+      <div class="img-width-500 image-margin-center img-border margin-btm-10">
+        <a href="{{ site.url }}{{ post.url }}">
+          <picture>
+            <source type="image/webp" srcset="{{ site.url }}/images/products/{% if post.thumbnail == 'you' %}{{ post.image }}-thumbnail{% else %}{{ post.image }}{% endif %}.webp" width="500" height="333" class="img-responsive" alt="{{ post.title }}">
+            <img src="{{ site.url }}/images/products/{% if post.thumbnail == 'you' %}{{ post.image }}-thumbnail{% else %}{{ post.image }}{% endif %}.jpg" width="500" height="333" class="img-responsive" alt="{{ post.title }}">
+          </picture>
+        </a>
+      </div>
+      <p class="font-size-20 font-weight-700 text-center"><a href="{{ site.url }}{{ post.url }}" class="hover-color-black">{{ post.model }}</a></p>
+    </div>{% endif %}{% endfor %}
+  </div>
+</div>

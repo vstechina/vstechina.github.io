@@ -1,0 +1,64 @@
+---
+layout: pages
+permalink: /contact/
+schema: ContactPage
+category: contact
+bg-nav: you
+title: Contact Us
+keywords: vste
+description: If want to find any details of VSTE products you can contact us, Tel +86-15705235962, Email mandy021@yeah.net.
+---
+<div class="container margin-top-50 padding-btm-20">
+  <div class="bg-white img-rounded margin-btm-50 box-shadow">
+    <div class="row">
+      <div class="col-xxl-6 col-xl-7 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <a href="https://maps.app.goo.gl/pxyH8EuEH5wMXTyY7" target="_blank">
+          <picture>
+            <source type="image/webp" srcset="{{ site.url }}/images/contact/map.webp" width="800" height="550" class="img-responsive img-rounded" alt="VSTE Google Map"><img src="{{ site.url }}/images/contact/map.jpg" width="800" height="550" class="img-responsive img-rounded" alt="VSTE Google Map">
+          </picture>
+        </a>
+      </div>
+      <div class="col-xxl-6 col-xl-5 col-lg-6 col-md-12 col-sm-12 col-xs-12 padding-40">
+        <p class="text-black">Address</p>
+        <p class="font-size-16 font-weight-700">{{ site.address }}</p>
+        <p class="text-black">E-mail</p>
+        <p class="font-size-25 font-weight-700"><a href="mailto:{{ site.email }}" target="_blank">{{ site.email }}</a></p>
+        <p class="text-black">Tel</p>
+        <p class="font-size-16 font-weight-700"><a href="tel:{{ site.tel }}" class="hover-color" target="_blank">{{ site.tel }}</a></p>
+        <div class="row margin-top-30">
+          <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <div class="img-width-39">
+              <a href="https://wa.me/{{ site.whatsapp }}" target="_blank" aria-label="Whatsapp">
+                <picture>
+                  <source type="image/webp" srcset="{{ site.url }}/images/assets/whatsapp.webp" width="39" height="39" alt="Whatsapp">
+                  <img src="{{ site.url }}/images/assets/whatsapp.png" width="39" height="39" alt="Whatsapp">
+                </picture>
+              </a>
+            </div>
+          </div>
+          <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <div class="img-width-39">
+              <a href="{{ site.facebook }}" target="_blank" aria-label="Facebook">
+                <picture>
+                  <source type="image/webp" srcset="{{ site.url }}/images/assets/facebook.webp" width="39" height="39" alt="Facebook">
+                  <img src="{{ site.url }}/images/assets/facebook.png" width="39" height="39" alt="Facebook">
+                </picture>
+              </a>
+            </div>
+          </div>
+          <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            <div class="img-width-39">
+              <a href="{{ site.youtube }}" target="_blank" aria-label="Youtube">
+                <picture>
+                  <source type="image/webp" srcset="{{ site.url }}/images/assets/youtube.webp" width="39" height="39" alt="Youtube">
+                  <img src="{{ site.url }}/images/assets/youtube.png" width="39" height="39" alt="Youtube">
+                </picture>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include feedback.html %}
+</div>

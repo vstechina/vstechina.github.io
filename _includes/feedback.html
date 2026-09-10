@@ -1,0 +1,53 @@
+<p class="text-black font-size-25 font-weight-700 margin-btm-30">Get a Free Quote</p>
+<div class="row margin-btm-10">
+  <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center">
+    <div class="bg-dark img-rounded padding-40 margin-btm-30">
+      <div class="img-width-60 image-margin-center margin-btm-30">
+        <a href="mailto:{{ site.email }}?subject={{ page.title }}" target="_blank">
+          <picture>
+            <source type="image/webp" srcset="{{ site.url }}/images/assets/mail.webp" width="60" height="60" alt="Email">
+            <img src="{{ site.url }}/images/assets/mail.png" width="60" height="60" alt="Email">
+          </picture>
+        </a>
+      </div>
+      <span class="font-size-20 font-weight-700"><a href="mailto:{{ site.email }}?subject={{ page.title }}" target="_blank" class="hover-color-black">{{ site.email }}</a></span>
+    </div>
+  </div>
+  <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center">
+    <div class="bg-dark img-rounded padding-40 margin-btm-30">
+      <div class="img-width-60 image-margin-center margin-btm-30">
+        <a href="https://wa.me/{{ site.whatsapp }}" target="_blank" rel="noopener">
+          <picture>
+            <source type="image/webp" srcset="{{ site.url }}/images/assets/whatsapp.webp" width="60" height="60" alt="Whatsapp">
+            <img src="{{ site.url }}/images/assets/whatsapp.png" width="60" height="60" alt="Whatsapp">
+          </picture>
+        </a>
+      </div>
+      <span class="font-size-20 font-weight-700"><a href="https://wa.me/{{ site.whatsapp }}" class="hover-color-black" target="_blank" rel="noopener">{{ site.whatsapp }}</a></span>
+    </div>
+  </div>
+  <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center">
+    <div class="bg-dark img-rounded padding-40 margin-btm-30">
+      <div class="img-width-60 image-margin-center margin-btm-30">
+        <a href="tel:{{ site.tel }}" target="_blank">
+          <picture>
+            <source type="image/webp" srcset="{{ site.url }}/images/assets/phone.webp" width="60" height="60" alt="Phone">
+            <img src="{{ site.url }}/images/assets/phone.png" width="60" height="60" alt="Phone">
+          </picture>
+        </a>
+      </div>
+      <span class="font-size-20 font-weight-700"><a href="tel:{{ site.tel }}" class="hover-color-black" target="_blank">{{ site.tel }}</a></span>
+    </div>
+  </div>
+  <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center">
+    <div class="bg-dark img-rounded padding-40 margin-btm-30">
+      <div class="img-width-60 image-margin-center margin-btm-30">
+        <picture>
+          <source type="image/webp" srcset="{{ site.url }}/images/assets/wechat.webp" width="60" height="60" alt="WeChat">
+          <img src="{{ site.url }}/images/assets/wechat.png" width="60" height="60" alt="WeChat">
+        </picture>
+      </div>
+      <span class="font-size-20 font-weight-700 text-black">WeChat</span>
+    </div>
+  </div>
+</div>

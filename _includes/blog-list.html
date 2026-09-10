@@ -1,0 +1,17 @@
+<div class="row hidden-xs">{% for post in site.categories["blog"] limit:4 %}
+  <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-6">
+    <div class="bg-white img-rounded margin-btm-30 box-shadow">
+      <div class="img-width-800 image-margin-center">
+        <a href="{{ site.url }}{{ post.url }}">
+          <picture>
+            <source type="image/webp" srcset="{{ site.url }}/images/blog/{{ post.image }}.webp" width="800" height="500" class="img-responsive border-top-radius" alt="{{ post.title }}"><img src="{{ site.url }}/images/blog/{{ post.image }}.jpg" width="800" height="500" class="img-responsive border-top-radius" alt="{{ post.title }}">
+          </picture>
+        </a>
+      </div>
+      <div class="padding-bg-white-list">
+        <p><a href="{{ site.url }}{{ post.url }}" class="hover-color-black">{{ post.title }}</a></p>
+        <p class="font-size-14 text-gery margin-btm-10">{{ post.date | date:"%d %b %Y" }}</p>
+      </div>
+    </div>
+  </div>{% endfor %}
+</div>

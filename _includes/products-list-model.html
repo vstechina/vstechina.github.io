@@ -1,0 +1,13 @@
+<div class="row margin-btm-20">{% for post in site.categories["chanpin"] %}{% if post.type-en == page.type-en %}
+  <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-30">
+    <div class="img-width-{{ post.pic-width }} image-margin-center img-border margin-btm-10">
+      <a href="{{ site.url }}{{ post.url }}">
+        <picture>
+          <source type="image/webp" srcset="{{ site.url }}/images/products/{{ post.image }}.webp" width="{{ post.pic-width }}" height="{{ post.pic-height }}" class="img-responsive" alt="{{ post.title }}">
+          <img src="{{ site.url }}/images/products/{{ post.image }}.jpg" width="{{ post.pic-width }}" height="{{ post.pic-height }}" class="img-responsive" alt="{{ post.title }}">
+        </picture>
+      </a>
+    </div>
+    <p class="font-size-20 font-weight-700 text-center"><a href="{{ site.url }}{{ post.url }}" class="hover-color-black">{{ post.model }}</a></p>
+  </div>{% endif %}{% endfor %}
+</div>

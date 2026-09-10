@@ -1,0 +1,11 @@
+---
+layout: pages
+---
+{{ content }}
+<div class="container">
+  <div class="padding-btm-10">
+    {% include feedback.html %}
+  </div>
+  <p class="font-size-25 text-black font-weight-700 margin-btm-30">You May Also Like</p>{% if page.products-list == 'model' %}
+  {% include products-list-model.html %}{% else %}{% include products-list-title.html %}{% endif %}
+</div>

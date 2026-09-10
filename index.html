@@ -1,0 +1,72 @@
+---
+layout: default
+schema: WebPage
+category: home
+full_title: High Quality Door Hardware
+video: you
+youtube: Hc4BvmVErQQ
+duration: PT1M24S
+video-duration: 84
+video-title: About VSTE
+video-image: about-vste
+video-description: About VSTE
+date: 2025-05-17
+---
+<div class="hidden-md hidden-xs hidden-sm">
+  <a href="{{ site.url }}/about/">
+    <picture>
+      <source type="image/webp" srcset="{{ site.url }}/images/home/about.webp" alt="About VSTE" width="1920" height="700" class="img-responsive">
+      <img src="{{ site.url }}/images/home/about.jpg" alt="About VSTE" width="1920" height="700" class="img-responsive">
+    </picture>
+  </a>
+</div>
+<div class="hidden-lg hidden-xl hidden-xxl">
+  <a href="{{ site.url }}/about/">
+    <div class="img-width-1000 image-margin-center">
+      <picture>
+        <source type="image/webp" srcset="{{ site.url }}/images/home/about-small.webp" alt="About VSTE" width="1000" height="1000" class="img-responsive">
+        <img src="{{ site.url }}/images/home/about-small.jpg" alt="About VSTE" width="1000" height="1000" class="img-responsive">
+      </picture>
+    </div>
+  </a>
+</div>
+<div class="bg-dark">
+  <div class="container padding-top-40 padding-btm-30">
+    <p class="font-size-25 text-black text-center margin-btm-30 font-weight-700">Products</p>
+    <div class="row">{% for post in site.categories["products-category"] %}
+      <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <div class="bg-white img-rounded margin-btm-40">
+          <div class="img-width-800 image-margin-center">
+            <a href="{{ site.url }}{{ post.url }}">
+              <picture>
+                <source type="image/webp" srcset="{{ site.url }}/images/home/{{ post.image }}.webp" width="800" height="600" class="img-responsive border-top-radius" alt="{{ post.title }}">
+                <img src="{{ site.url }}/images/home/{{ post.image }}.jpg" width="800" height="600" class="img-responsive border-top-radius" alt="{{ post.title }}">
+              </picture>
+            </a>
+          </div>
+          <div class="padding-bg-white-list">
+            <p class="font-size-20 font-weight-700 text-center margin-btm-10"><a href="{{ site.url }}{{ post.url }}" class="hover-color-black">{{ post.title }}</a></p>
+            <p class="font-size-14 text-gery text-center">{{ post.home-description }}</p>
+          </div>
+        </div>
+      </div>{% endfor %}
+    </div>
+  </div>
+</div>
+<div class="container padding-top-50 padding-btm-30">
+  <p class="font-size-25 text-black text-center margin-btm-30 font-weight-700">About VSTE</p>
+  <div class="row">
+    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+      <div class="img-width-800 image-margin-center margin-btm-30">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ page.youtube }}" width="800" height="450" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 margin-btm-30">
+      <p class="text-justify"><span class="font-size-18 text-brown font-weight-700">VSTE manufacture Co.,ltd</span> established in 2009, is the owner of the VSTE brand, specializing in high-quality engineering hardware and home decoration hardware. The company operates a 40,000-square-meter modern manufacturing facility, dedicated to providing premium products and professional ODM and OEM services to high-end clients worldwide. Our products are certified by internationally recognized standards, including UL, FDA, and CE, ensuring that every product meets the highest global quality requirements.</p>
+      <p class="text-justify margin-btm-30">The VSTE brand is registered in Italy, and we serve a wide range of high-end clients in North America (Canada, the US), Europe (Germany, France, the UK, Sweden, Italy), and the Middle East (Dubai, Saudi Arabia). Among our prestigious partners, we are a trusted supplier to Greif, a high-end lock brand in Germany.</p>
+      <p><a href="{{ site.url }}/about/" class="btn btn-brown btn-radius">About VSTE</a></p>
+    </div>
+  </div>
+</div>

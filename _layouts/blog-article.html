@@ -1,0 +1,13 @@
+---
+layout: pages
+---
+<div class="container margin-top-40 padding-btm-50">
+  <h1 class="text-black font-size-25 font-weight-700">{{ page.title }}</h1>
+  <p class="font-size-14 text-gery margin-btm-40">{{ page.date | date:"%d %b %Y" }}</p>
+  {{ content }}
+  <div class="dark-heading margin-top-50"></div>
+  <p class="margin-top-30">Keywords: <span class="text-brown font-weight-700">{{ page.keywords }}</span></p>
+  <p class="margin-btm-50">Originally published <span class="text-brown font-weight-700">{{ page.date | date_to_string }}</span>, updated <span class="text-brown font-weight-700">{{ page.date | date_to_string }}</span>.</p>
+  {% include blog-list.html %}
+  <p class="text-center"><a href="{{ site.url }}/blog/" class="btn btn-brown btn-radius">More Blog</a></p>
+</div>
