@@ -5,10 +5,7 @@ layout: pages
   <div class="row margin-btm-40">
     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">{% if page.pic == 'one' %}
       <div class="img-width-500 image-margin-center">
-        <picture>
-          <source type="image/webp" srcset="{{ site.url }}/images/products/{{ page.image }}.webp" width="500" height="333" class="img-responsive" alt="{{ page.title }}">
-          <img src="{{ site.url }}/images/products/{{ page.image }}-1.jpg" width="500" height="333" class="img-responsive" alt="{{ page.title }}">
-        </picture>
+        <img src="{{ site.url }}/images/products/{{ page.image }}-1.jpg" width="500" height="333" class="img-responsive" alt="{{ page.title }}">
       </div>{% else %}
       <div class="f-carousel" id="myCarousel">{% if page.pic == 'two' %}
         <div class="f-carousel__slide" data-thumb-src="{{ site.url }}/images/products/{{ page.image }}-1.jpg">
