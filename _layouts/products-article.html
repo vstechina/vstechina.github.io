@@ -20,5 +20,6 @@ layout: pages
   <div class="padding-btm-10">
     {% include feedback.html %}
   </div>
-  <p class="text-center margin-btm-50"><a href="{{ site.url }}/{{ page.type-en }}/" class="btn btn-brown btn-radius">You May Also Like</a></p>
+  <p class="font-size-25 text-black font-weight-700 margin-btm-30">You May Also Like</p>{% if page.products-list == 'model' %}
+  {% include products-list-model.html %}{% else %}{% include products-list-title.html %}{% endif %}
 </div>
